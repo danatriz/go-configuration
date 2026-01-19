@@ -8,7 +8,14 @@ import (
 func main() {
 	graylog, err := test.TestGraylog()
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 	log.Println(graylog)
+
+	cassandra, err := test.TestCassandra()
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(cassandra)
+
 }
