@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 
+	_ "github.com/go-kivik/couchdb/v3" // CouchDB driver
 	"github.com/go-kivik/kivik/v3"
 	"github.com/spf13/viper"
 )

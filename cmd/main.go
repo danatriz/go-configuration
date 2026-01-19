@@ -18,16 +18,22 @@ func main() {
 	}
 	log.Println(cassandra)
 
-	postgresql, err := test.TestPostgreSQL()
-	if err != nil {
-		log.Fatal(err)
-	}
-	log.Println(postgresql)
+	//postgresql, err := test.TestPostgreSQL()
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	//log.Println(postgresql)
 
 	couchdb, err := test.TestCouchDB()
 	if err != nil {
 		log.Fatal(err)
 	}
 	log.Println(couchdb)
+
+	redis, err := test.TestRedis()
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(redis)
 
 }
