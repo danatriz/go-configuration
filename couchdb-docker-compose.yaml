@@ -1,0 +1,23 @@
+services:
+  couchdb:
+    image: couchdb:3.3
+    container_name: couchdb
+    ports:
+      - "5984:5984"
+    networks:
+      - internal
+    volumes:
+      - ./couchdb_data:/opt/couchdb/data
+    environment:
+      - COUCHDB_USER=admin
+      - COUCHDB_PASSWORD=password
+      - COUCHDB_SECRET=mysecret
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5984/_up"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  internal:
+    driver: bridge

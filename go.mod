@@ -5,6 +5,7 @@ go 1.24.5
 require (
 	github.com/Devatoria/go-graylog v0.0.0-20171023211614-c16c35c9383b
 	github.com/gin-gonic/gin v1.11.0
+	github.com/go-kivik/kivik/v3 v3.2.4
 	github.com/gocql/gocql v1.7.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/viper v1.21.0

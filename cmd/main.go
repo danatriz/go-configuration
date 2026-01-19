@@ -24,4 +24,10 @@ func main() {
 	}
 	log.Println(postgresql)
 
+	couchdb, err := test.TestCouchDB()
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(couchdb)
+
 }
