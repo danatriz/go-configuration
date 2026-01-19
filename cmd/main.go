@@ -18,4 +18,10 @@ func main() {
 	}
 	log.Println(cassandra)
 
+	postgresql, err := test.TestPostgreSQL()
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(postgresql)
+
 }
